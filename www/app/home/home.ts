@@ -1,4 +1,4 @@
-import {Page} from 'ionic/ionic'
+import {Page, NavController} from 'ionic/ionic'
 import {MyComponent} from '../test/test'
 
 @Page({
@@ -6,5 +6,8 @@ import {MyComponent} from '../test/test'
   directives: [MyComponent],
 })
 export class HomePage {
-  constructor() {}
+  private nav: NavController;
+  constructor(nav: NavController) {
+    this.nav = nav
+  }
 }
